@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AltusPixel - Free Image to Pixel Art Converter</title>
+<meta name="description" content="Turn an image into pixel art, free, in your browser. Draw a sprite, a tile, or an isometric room, then save it as a Godot TileSet, a complete GameMaker project, a Tiled map, or a Unity sheet." data-claims="converter-free converter-local short-draw short-save">
+<link rel="canonical" href="https://typo-negetive.github.io/altuspixel-site/">
+<meta name="theme-color" content="#16181a">
+<meta property="og:site_name" content="AltusPixel">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AltusPixel - Free Image to Pixel Art Converter">
+<meta property="og:description" content="Turn an image into pixel art, free, in your browser. Draw a sprite, a tile, or an isometric room, then save it as a Godot TileSet, a complete GameMaker project, a Tiled map, or a Unity sheet.">
+<meta property="og:url" content="https://typo-negetive.github.io/altuspixel-site/">
+<meta property="og:image" content="https://typo-negetive.github.io/altuspixel-site/stills/isometric_block_building.png">
+<meta property="og:image:alt" content="Drag a box, pull it up, and click: shaded, with a light top and darker sides" data-claims="iso-box">
+<link rel="icon" type="image/png" href="brand/icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+<!-- chrome:header -->
+<a class="skip" href="#main">Skip to Content</a>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="a">Altus</span><span class="p">Pixel</span></a>
+  <div class="store-links">
+    <a class="btn btn-primary" href="https://store.steampowered.com/app/4870980/AltusPixel/?utm_source=site&amp;utm_medium=web&amp;utm_campaign=index" target="_blank" rel="noopener">Get It on Steam</a>
+  </div>
+</header>
+<nav class="site-nav" aria-label="Pages">
+  <a href="index.html" aria-current="page">Free Converter</a>
+  <a href="aseprite-alternative.html">Aseprite Alternative</a>
+  <a href="pixel-art-editor-for-godot.html">For Godot</a>
+  <a href="gamemaker-sprite-export.html">For GameMaker</a>
+  <a href="tiled-and-unity.html">Tiled and Unity</a>
+  <a href="whats-new.html">What's New</a>
+  <a href="press.html">Press Kit</a>
+</nav>
+<!-- /chrome:header -->
+
+<main id="main">
+  <h1>Turn an Image into Pixel Art</h1>
+  <p class="tag" data-claims="converter-free converter-local">Free, right in your browser. Nothing uploaded; all of it on your device.</p>
+
+  <section class="converter" aria-label="Pixel Art Converter" data-census="skip">
+    <div class="card">
+      <div id="drop" class="drop" tabindex="0" role="button">
+        <strong>Drop an Image</strong><br>or Click to Choose<br>
+        <span class="hint">or Paste with Ctrl&#8203;+V</span>
+        <input id="file" type="file" accept="image/*" hidden>
+      </div>
+
+      <label class="ctl" for="block">Block Size - <span id="blockVal" class="val">10</span> px</label>
+      <input id="block" type="range" min="2" max="48" value="10">
+
+      <label class="ctl" id="sampLabel">Sampling</label>
+      <div class="seg" id="samp" role="group" aria-labelledby="sampLabel">
+        <button data-s="average" class="on">Smooth</button>
+        <button data-s="point">Sharp</button>
+      </div>
+
+      <label class="ctl" for="palette">Palette</label>
+      <select id="palette"></select>
+
+      <button id="dl" class="dl" disabled>Download PNG</button>
+    </div>
+
+    <div class="stage">
+      <div id="ph" class="placeholder">Drop an image to see your pixel art here.</div>
+      <canvas id="out" hidden></canvas>
+    </div>
+    <noscript>Turn on JavaScript to use the converter.</noscript>
+  </section>
+
+  <section class="funnel">
+    <h2>Pixel Art That Opens in Your Engine</h2>
+    <p data-claims="short-draw short-save short-rig platforms">Draw a sprite, a tile, or an isometric room, then save it as a Godot TileSet, a complete GameMaker project, a Tiled map, or a Unity sheet. Rig, stage, and animate on the same canvas. Windows and Linux.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://store.steampowered.com/app/4870980/AltusPixel/?utm_source=site&amp;utm_medium=web&amp;utm_campaign=index" target="_blank" rel="noopener">Follow on Steam</a>
+      <a class="btn" href="https://store.steampowered.com/app/4870980/AltusPixel/?utm_source=site&amp;utm_medium=web&amp;utm_campaign=index" target="_blank" rel="noopener">Get It on Steam</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where Your Art Goes</h2>
+    <ul class="cards">
+      <li>
+        <a href="pixel-art-editor-for-godot.html">Godot</a>
+        <p data-claims="godot-gets">Export Godot SpriteFrames and a TileSet.</p>
+      </li>
+      <li>
+        <a href="gamemaker-sprite-export.html">GameMaker</a>
+        <p data-claims="gamemaker-gets">Export a whole GameMaker project: the sprite, the tileset, and a room laid out.</p>
+      </li>
+      <li>
+        <a href="tiled-and-unity.html">Tiled and Unity</a>
+        <p data-claims="tiled-gets unity-gets">Export a Tiled map and a Unity sheet with its data.</p>
+      </li>
+      <li>
+        <a href="aseprite-alternative.html">Aseprite Alternative</a>
+        <p data-claims="ase-open ase-write">Open an Aseprite file as a document. Save as an Aseprite file.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="answers">
+    <h2>Plain Answers</h2>
+    <h3>What Does It Run On?</h3>
+    <p data-claims="platforms">Windows and Linux.</p>
+    <h3>What Does It Cost?</h3>
+    <p data-claims="price-steam">$7.99 on Steam.</p>
+  </section>
+</main>
+
+<!-- chrome:footer -->
+<footer class="site-footer">
+  <p class="facts" data-claims="platforms price-steam">For Windows and Linux. $7.99 on <a href="https://store.steampowered.com/app/4870980/AltusPixel/?utm_source=site&amp;utm_medium=web&amp;utm_campaign=index" target="_blank" rel="noopener">Steam</a>.</p>
+  <p class="legal">&copy; 2026 Altus Sensus Consulting LLC. "AltusPixel" and the AltusPixel logo are trademarks of Altus Sensus Consulting LLC.</p>
+  <p class="legal">&copy;2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</p>
+</footer>
+<!-- /chrome:footer -->
+</div>
+
+<script>
+const PALETTES = {
+  "Full Color, No Palette": null,
+  "Grayscale 8": ["000000","242424","484848","6d6d6d","919191","b6b6b6","dadada","ffffff"],
+  "Fantasy Console 16": ["000000","1D2B53","7E2553","008751","AB5236","5F574F","C2C3C7","FFF1E8","FF004D","FFA300","FFEC27","00E436","29ADFF","83769C","FF77A8","FFCCAA"],
+  "Soft Pop 16": ["1a1c2c","5d275d","b13e53","ef7d57","ffcd75","a7f070","38b764","257179","29366f","3b5dc9","41a6f6","73eff7","f4f4f4","94b0c2","566c86","333c57"],
+  "Handheld Green 4": ["0f380f","306230","8bac0f","9bbc0f"],
+  "80s Neon": ["ff2a6d","d1006c","ff6ac1","f9f871","ff9472","ff5f1f","05ffa1","00f0ff","2de2e6","00b3ff","4d4dff","7a04eb","b537f2","3a0ca3","1a1a2e","ffffff"]
+};
+const hex2rgb = h => [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];
+const PAL_RGB = Object.fromEntries(Object.entries(PALETTES).map(([k,v])=>[k, v?v.map(hex2rgb):null]));
+
+const $ = id => document.getElementById(id);
+const out = $("out"), octx = out.getContext("2d");
+const small = document.createElement("canvas"), sctx = small.getContext("2d", {willReadFrequently:true});
+let img = null, sampling = "average";
+
+const palSel = $("palette");
+for (const name of Object.keys(PALETTES)){ const o=document.createElement("option"); o.textContent=name; palSel.appendChild(o); }
+
+function nearest(r,g,b,pal){
+  let bi=0,bd=Infinity;
+  for(let i=0;i<pal.length;i++){const p=pal[i];const d=(r-p[0])**2+(g-p[1])**2+(b-p[2])**2; if(d<bd){bd=d;bi=i;}}
+  return pal[bi];
+}
+
+function render(){
+  if(!img) return;
+  const block = +$("block").value;
+  const cols = Math.max(1, Math.round(img.width/block));
+  const rows = Math.max(1, Math.round(img.height/block));
+  small.width=cols; small.height=rows;
+  sctx.imageSmoothingEnabled = (sampling==="average");
+  sctx.clearRect(0,0,cols,rows);
+  sctx.drawImage(img,0,0,cols,rows);
+
+  const pal = PAL_RGB[palSel.value];
+  if(pal){
+    const d = sctx.getImageData(0,0,cols,rows);
+    const a = d.data;
+    for(let i=0;i<a.length;i+=4){
+      if(a[i+3]<8) continue;
+      const [r,g,b]=nearest(a[i],a[i+1],a[i+2],pal);
+      a[i]=r;a[i+1]=g;a[i+2]=b;
+    }
+    sctx.putImageData(d,0,0);
+  }
+  const scale = Math.max(1, Math.floor(900/Math.max(cols,rows)));
+  out.width=cols*scale; out.height=rows*scale;
+  octx.imageSmoothingEnabled=false;
+  octx.clearRect(0,0,out.width,out.height);
+  octx.drawImage(small,0,0,out.width,out.height);
+  out.hidden=false; $("ph").hidden=true; $("dl").disabled=false;
+}
+
+function loadFile(file){
+  if(!file || !file.type.startsWith("image/")) return;
+  const r=new FileReader();
+  r.onload=e=>{const im=new Image(); im.onload=()=>{img=im; render();}; im.src=e.target.result;};
+  r.readAsDataURL(file);
+}
+
+$("drop").addEventListener("click",()=>$("file").click());
+$("drop").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault(); $("file").click();}});
+$("file").addEventListener("change",e=>loadFile(e.target.files[0]));
+$("block").addEventListener("input",e=>{$("blockVal").textContent=e.target.value; render();});
+palSel.addEventListener("change",render);
+document.querySelectorAll("#samp button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#samp button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); sampling=b.dataset.s; render();
+}));
+const drop=$("drop");
+["dragover","dragenter"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over");}));
+["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("over");}));
+drop.addEventListener("drop",e=>loadFile(e.dataTransfer.files[0]));
+window.addEventListener("paste",e=>{const it=[...e.clipboardData.items].find(i=>i.type.startsWith("image/")); if(it) loadFile(it.getAsFile());});
+$("dl").addEventListener("click",()=>{
+  const a=document.createElement("a"); a.download="altuspixel.png"; a.href=out.toDataURL("image/png"); a.click();
+});
+</script>
+</body>
+</html>

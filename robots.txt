@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://typo-negetive.github.io/altuspixel-site/sitemap.xml
