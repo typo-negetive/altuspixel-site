@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "pixelfx",
+      "name": "pixelfx",
+      "kind": "effects",
+      "homepage": "https://github.com/patch-gg/pixelfx",
+      "license_name": "MIT",
+      "license_url": "https://github.com/patch-gg/pixelfx/blob/main/LICENSE",
+      "sentence": "244 pixel art effects as sprite sheets: fire, ice, lightning, portals, explosions, and more.",
+      "version": "v0.3.0-sheets1",
+      "url": "https://github.com/typo-negetive/pixelfx/releases/download/{version}/pixelfx-sheets-{version}.zip",
+      "size_bytes": 182781094,
+      "sha256": "28c990f50bc672a20ae3d77f10726647e43a57125124c0e05267820d1ddfa481"
+    },
+    {
+      "id": "lospec-palettes",
+      "name": "Lospec Palettes",
+      "kind": "palettes",
+      "homepage": "https://lospec.com/palette-list",
+      "license_name": "Free to use, by the site's own terms",
+      "license_url": "https://lospec.com/palette-list",
+      "sentence": "12 palettes the pixel art world uses most, loaded into your palette library.",
+      "version": "1",
+      "url": "https://lospec.com/palette-list",
+      "size_bytes": 20000,
+      "sha256": null,
+      "slugs": [
+        "apollo",
+        "endesga-32",
+        "pico-8",
+        "sweetie-16",
+        "resurrect-64",
+        "lospec500",
+        "nes",
+        "vinik24",
+        "slso8",
+        "aap-64",
+        "dawnbringer-32",
+        "pear36"
+      ]
+    }
+  ]
+}
