@@ -44,6 +44,75 @@
   <div class="cta-row">
     <a class="btn btn-primary" href="https://store.steampowered.com/app/4870980/AltusPixel/?utm_source=site&amp;utm_medium=web&amp;utm_campaign=whats-new" target="_blank" rel="noopener">Get It on Steam</a>
   </div>
+  <section class="wn-version" id="v2-333-0">
+    <h2>Version 2.333.0</h2>
+    <article class="wn-row" data-census="generated">
+      <h3>New live effect layers: Shade from a Light, and Follow Another Effect Layer</h3>
+      <p>Choose Layer, Add Live Effect Layer, then Shade from a Light to shade the layer below from a light you can move and key, with the shading redrawn as you edit. Choose Follow Another Effect Layer to draw the layer below the way an effect layer you already made does, with its settings and keys.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Flat to Isometric and a perspective grid</h3>
+      <p>Choose Layer, Add Live Effect Layer, then Flat to Isometric to draw the layer below as a floor seen from the isometric angle, with the corner you pick pointing up. Tick Perspective Grid in the Tiles panel to draw guide lines from vanishing points over the picture, with points you drag, saved with the project.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Projects in Steam Cloud</h3>
+      <p>Choose File, Steam Cloud, then Save to Steam Cloud to save a project where Steam syncs it to every machine signed in to your account, when you run AltusPixel from Steam. A project can be up to 100 MB, and the folder holds up to 1 GB.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>RPG Maker Walls, Roofs, and Animated Water</h3>
+      <p>Choose Image, Generate, then Autotiles, and pick the 16-Tile Wall or the 16-Tile Roof kind to make a terrain RPG Maker reads as a wall or a roof. Choose File, Export, Game Engines, then the For RPG Maker entry for tiles, and a wall or a roof is written to the A3 sheet. A terrain with animated tiles becomes water or a waterfall on the A1 sheet.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Animation Sheets Per Layer</h3>
+      <p>Choose File, Export, Animation, then Animation Sheets Per Layer to write one sheet and one JSON per layer, each trimmed to its painted pixels with the offset recorded, all with the same frame timing and tags, so a character, their gear, and their effects stack again in your game.</p>
+    </article>
+  </section>
+  <section class="wn-version" id="v2-332-0">
+    <h2>Version 2.332.0</h2>
+    <article class="wn-row" data-census="generated">
+      <h3>Integrations: turn on effects and palettes from other sites</h3>
+      <p>Choose Settings, Integrations to turn on the 244 pixel art effects from pixelfx or 12 palettes from Lospec. Each downloads from its own site into your folder after you read its license and click Allow, and nothing of theirs runs.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Inherited Layers: a level made from a parent level</h3>
+      <p>Choose World, Level Properties, and pick Inherits From to draw a parent level&#x27;s layers under your own. Paint in the parent to change every level that inherits from it. Click Copy to edit a layer on its own.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>GB Studio: a background and a sprite strip in its own shades</h3>
+      <p>Choose File, Export, Game Engines, then the For GB Studio entry for a background or the one for a sprite to write a PNG in GB Studio&#x27;s 4 shades at the sizes it reads. A size GB Studio refuses is said before you save. Put the file in your project&#x27;s assets folder, and GB Studio shows it when you switch back to it.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>RPG Maker: a walking character and tile sheets at its sizes</h3>
+      <p>Choose File, Export, Game Engines, then the For RPG Maker entry for a character or the one for tiles. Name frame tags Down, Left, Right, and Up, with 3 frames each, or use 12 frames in that order. Art is enlarged by a whole number to the 48 pixel grid, and a 47-tile blob terrain becomes a ground autotile. The character goes in your project&#x27;s img/characters folder, and the tile sheets go in img/tilesets.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Defold: your tile map as Defold&#x27;s own files</h3>
+      <p>Choose File, Export, Game Engines, then the For Defold entry to write a tile sheet, a tile source, and a tile map for each level, the files Defold&#x27;s editor writes. Put the folder in your Defold project, then add the tile map file to a game object as a Tilemap component.</p>
+    </article>
+  </section>
+  <section class="wn-version" id="v2-331-0">
+    <h2>Version 2.331.0</h2>
+    <article class="wn-row" data-census="generated">
+      <h3>Stages: loose canvases on the board</h3>
+      <p>Choose World, New Stage to make a loose canvas for a character sheet, a UI mockup, or a scratch board. The Stages board shows each stage as a card with its picture: drag a card to move it, drag from the handle on its side to another card to connect them, and right-click a card, a line, or the empty board to see what you can do there. Open a project with stages in 2.331.0 or later, since 2.330.0 drops the stages and their connections on save.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>A World mode on the mode bar</h3>
+      <p>Click World on the mode bar to show the World Board next to the Levels panel for the picture you have open, with the tile, object, and value tools beside them. Leaving the mode hides only what the mode showed, so a board you opened yourself stays.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Replace a tile across a level or a world</h3>
+      <p>Click World on the mode bar, then choose Layer, Tiles, Replace Tile to swap a tile for another on a layer, on a level, or on every level of a world, and each level takes an undo step of its own. Choose Go to Cell to scroll to a column and a row, save a block you chose in the picker as a stamp, and choose Remove Duplicate Tiles to merge tiles that hold the same pixels.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Export a world without opening the app</h3>
+      <p>Run AltusPixel from a terminal with --export, an engine name, your project file, and --out with a folder to write a Tiled, Godot, GameMaker, LDtk, or World JSON export with no window, and add --world with a world name to write only that one. Choose File, Export, Game Engines, Run a Command After Export to start a program after each export in the app.</p>
+    </article>
+    <article class="wn-row" data-census="generated">
+      <h3>Play the Level: walk your world from its Spawn</h3>
+      <p>Choose World, Play the Level, or press F5 to walk the open level from its Spawn with the arrow keys. Mark a value Solid in the Value Legend to make it a wall, and step onto an Exit with a link to walk into the next level. Press Play on the World Board to walk the open level. Right-click a card, then choose Play, to walk its level.</p>
+    </article>
+  </section>
   <section class="wn-version" id="v2-330-0">
     <h2>Version 2.330.0</h2>
     <article class="wn-row" data-census="generated">
